@@ -1,3 +1,6 @@
-# TODO
-[ ] this is a sample todo
-[ ] to this (or else)
+# FEATURES
+
+[ ] Max depth arg/ENV_VAR
+[ ] Better USAGE
+
+
