@@ -38,4 +38,18 @@ while [[ ! "$search_dir" == "/" ]]; do
   search_dir="$(dirname "$search_dir")"
 done
 
-echo "No todo found!... bitch..."
+read -p "No todo found. Would you like to start one? [Y/n]: " answer
+answer="${answer,,}"
+if [[ "$answer" == "y" ]]; then
+  read -p "Where would you like to make todo.md? ($PWD): " where
+  where="${where:-$PWD}/todo.md"
+  echo "Making $where and opening it for editing" 
+  touch "$where"
+  ${EDITOR} ${where}
+  exit $?
+elif [[ "$answer" == "n" ]]; then
+  echo "ok then..."
+else
+  echo "Ya aint makin no sense!"
+fi
+
