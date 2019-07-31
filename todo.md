@@ -4,3 +4,5 @@
 [ ] Better USAGE
 
 
+# INTEGRATIONS
+[ ] port to windows
